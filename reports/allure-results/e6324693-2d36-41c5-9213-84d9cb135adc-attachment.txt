@@ -1,9 +1,0 @@
-[32mINFO    [0m api_test:base_client.py:18 GET http://127.0.0.1:8000/products/-1
-[32mINFO    [0m api_test:base_client.py:19 PARAMS: None
-[32mINFO    [0m api_test:base_client.py:20 HEADERS: {}
-[32mINFO    [0m api_test:base_client.py:29 STATUS_CODE: 404
-[32mINFO    [0m api_test:base_client.py:30 RESPONSE: <!doctype html>
-<html lang=en>
-<title>404 Not Found</title>
-<h1>Not Found</h1>
-<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>

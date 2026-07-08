@@ -1,8 +1,0 @@
-[32mINFO    [0m api_test:base_client.py:37 POST http://127.0.0.1:8000/login
-[32mINFO    [0m api_test:base_client.py:38 JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
-[32mINFO    [0m api_test:base_client.py:39 HEADERS: {}
-[32mINFO    [0m api_test:base_client.py:48 STATUS_CODE: 200
-[32mINFO    [0m api_test:base_client.py:49 RESPONSE: {
-  "code": 401,
-  "message": "Invalid credentials"
-}
