@@ -1,4 +1,7 @@
+from unittest import case
+
 import pytest
+import allure
 
 from api.base_client import BaseClient
 from utils.yaml_reader import read_yaml
@@ -6,9 +9,12 @@ from utils.yaml_reader import read_yaml
 
 product_cases = read_yaml("data/product_cases.yaml")
 
-
+@allure.feature("商品模块")
+@allure.story("商品接口")   
 @pytest.mark.parametrize("case", product_cases)
 def test_product_api(case):
+    allure.dynamic.title(f"{case['case_id']} - {case['case_name']}")
+
     client = BaseClient()
 
     response = client.get(case["path"])

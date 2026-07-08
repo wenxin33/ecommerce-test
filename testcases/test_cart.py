@@ -1,4 +1,5 @@
 import pytest
+import allure
 
 from api.base_client import BaseClient
 from utils.yaml_reader import read_yaml
@@ -6,9 +7,11 @@ from utils.yaml_reader import read_yaml
 
 cart_cases = read_yaml("data/cart_cases.yaml")
 
-
+@allure.feature("购物车模块")
+@allure.story("购物车接口")
 @pytest.mark.parametrize("case", cart_cases)
 def test_cart_api(case, client, auth_client, reset_data):
+    allure.dynamic.title(f"{case['case_id']} - {case['case_name']}")
     if case["token_type"] == "valid":
         current_client = auth_client
 
