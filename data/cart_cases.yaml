@@ -1,0 +1,134 @@
+- case_id: TC_CART_001
+  case_name: 携带正确token添加商品成功
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 1
+    quantity: 2
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: Add to cart success
+
+- case_id: TC_CART_002
+  case_name: 不带token添加商品失败
+  method: post
+  path: /cart
+  need_token: false
+  token_type: none
+  json_data:
+    product_id: 1
+    quantity: 2
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized
+
+- case_id: TC_CART_003
+  case_name: 错误token添加商品失败
+  method: post
+  path: /cart
+  need_token: true
+  token_type: invalid
+  json_data:
+    product_id: 1
+    quantity: 2
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized
+
+- case_id: TC_CART_004
+  case_name: 缺少product_id
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    quantity: 2
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: product_id is required
+
+- case_id: TC_CART_005
+  case_name: 缺少quantity
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 1
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: quantity is required
+
+- case_id: TC_CART_006
+  case_name: product_id不存在
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 999
+    quantity: 1
+  expected_http_status: 200
+  expected_code: 404
+  expected_message: Product not found
+
+- case_id: TC_CART_007
+  case_name: quantity为0
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 1
+    quantity: 0
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: quantity must be greater than 0
+
+- case_id: TC_CART_008
+  case_name: quantity为负数
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 1
+    quantity: -1
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: quantity must be greater than 0
+
+- case_id: TC_CART_009
+  case_name: quantity超过库存
+  method: post
+  path: /cart
+  need_token: true
+  token_type: valid
+  json_data:
+    product_id: 1
+    quantity: 999
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: Insufficient stock
+
+- case_id: TC_CART_010
+  case_name: 携带正确token查询购物车成功
+  method: get
+  path: /cart
+  need_token: true
+  token_type: valid
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+
+- case_id: TC_CART_011
+  case_name: 不带token查询购物车失败
+  method: get
+  path: /cart
+  need_token: false
+  token_type: none
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized

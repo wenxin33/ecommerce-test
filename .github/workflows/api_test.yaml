@@ -1,0 +1,53 @@
+name: API Automation Test
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create report and log folders
+        run: |
+          mkdir -p reports
+          mkdir -p logs
+
+      - name: Start mock API server
+        run: |
+          nohup python mock_api_server.py > logs/mock_server.log 2>&1 &
+          sleep 5
+
+      - name: Run pytest
+        run: |
+          pytest testcases/test_login.py testcases/test_product.py testcases/test_cart.py testcases/test_order.py
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-report
+          path: |
+            reports/report.html
+            logs/test.log
+            logs/mock_server.log

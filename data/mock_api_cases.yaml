@@ -1,0 +1,48 @@
+get_cases:
+  - case_name: GET 无参数请求
+    path: /get
+    expected:
+      status_code: 200
+      code: 200
+      message: success
+      method: GET
+
+  - case_name: GET 带 username 和 age 参数
+    path: /get
+    params:
+      username: test001
+      age: "18"
+    expected:
+      status_code: 200
+      code: 200
+      message: success
+      method: GET
+      username: ["test001"]
+      age: ["18"]
+
+post_cases:
+  - case_name: POST 登录数据请求
+    path: /post
+    json:
+      username: test001
+      password: "123456"
+    expected:
+      status_code: 200
+      code: 200
+      message: success
+      method: POST
+      username: test001
+      password: "123456"
+
+  - case_name: POST 空用户名请求
+    path: /post
+    json:
+      username: ""
+      password: "123456"
+    expected:
+      status_code: 200
+      code: 200
+      message: success
+      method: POST
+      username: ""
+      password: "123456"

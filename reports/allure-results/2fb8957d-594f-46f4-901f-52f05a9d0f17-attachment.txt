@@ -1,0 +1,11 @@
+[32mINFO    [0m api_test:base_client.py:23 REQUEST -> GET http://127.0.0.1:8000/get
+[32mINFO    [0m api_test:base_client.py:24 PARAMS: None
+[32mINFO    [0m api_test:base_client.py:25 JSON: None
+[32mINFO    [0m api_test:base_client.py:29 RESPONSE -> 200
+[32mINFO    [0m api_test:base_client.py:30 BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}

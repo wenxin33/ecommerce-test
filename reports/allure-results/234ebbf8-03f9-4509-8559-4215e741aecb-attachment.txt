@@ -1,0 +1,8 @@
+[32mINFO    [0m api_test:base_client.py:18 GET http://127.0.0.1:8000/products/999
+[32mINFO    [0m api_test:base_client.py:19 PARAMS: None
+[32mINFO    [0m api_test:base_client.py:20 HEADERS: {}
+[32mINFO    [0m api_test:base_client.py:29 STATUS_CODE: 200
+[32mINFO    [0m api_test:base_client.py:30 RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}

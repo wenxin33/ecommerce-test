@@ -1,0 +1,62 @@
+- case_id: TC_PRODUCT_001
+  case_name: 查询商品列表成功
+  request_type: list
+  path: /products
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+
+- case_id: TC_PRODUCT_002
+  case_name: 查询商品ID为1的详情成功
+  request_type: detail
+  path: /products/1
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+  expected_product_id: 1
+
+- case_id: TC_PRODUCT_003
+  case_name: 查询商品ID为2的详情成功
+  request_type: detail
+  path: /products/2
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+  expected_product_id: 2
+
+- case_id: TC_PRODUCT_004
+  case_name: 查询商品ID为3的详情成功
+  request_type: detail
+  path: /products/3
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+  expected_product_id: 3
+
+- case_id: TC_PRODUCT_005
+  case_name: 查询不存在商品ID
+  request_type: not_found
+  path: /products/999
+  expected_http_status: 200
+  expected_code: 404
+  expected_message: Product not found
+
+- case_id: TC_PRODUCT_006
+  case_name: 查询商品ID为0
+  request_type: not_found
+  path: /products/0
+  expected_http_status: 200
+  expected_code: 404
+  expected_message: Product not found
+
+- case_id: TC_PRODUCT_007
+  case_name: 查询商品ID为负数
+  request_type: flask_404
+  path: /products/-1
+  expected_http_status: 404
+
+- case_id: TC_PRODUCT_008
+  case_name: 查询商品ID为非数字
+  request_type: flask_404
+  path: /products/abc
+  expected_http_status: 404

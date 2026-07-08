@@ -1,0 +1,2740 @@
+2026-07-06 11:35:05,611 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 11:35:05,611 - INFO - PARAMS: None
+2026-07-06 11:35:05,611 - INFO - JSON: None
+2026-07-06 11:35:05,626 - INFO - RESPONSE -> 200
+2026-07-06 11:35:05,626 - INFO - BODY: {"code": 200, "message": "success", "method": "GET", "args": {}, "url": "/get"}
+2026-07-06 11:35:05,628 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 11:35:05,628 - INFO - PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 11:35:05,629 - INFO - JSON: None
+2026-07-06 11:35:05,631 - INFO - RESPONSE -> 200
+2026-07-06 11:35:05,631 - INFO - BODY: {"code": 200, "message": "success", "method": "GET", "args": {"username": ["test001"], "age": ["18"]}, "url": "/get?username=test001&age=18"}
+2026-07-06 11:35:05,633 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 11:35:05,633 - INFO - PARAMS: None
+2026-07-06 11:35:05,633 - INFO - JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 11:35:05,657 - INFO - RESPONSE -> 200
+2026-07-06 11:35:05,657 - INFO - BODY: {"code": 200, "message": "success", "method": "POST", "json": {"username": "test001", "password": "123456"}}
+2026-07-06 11:35:05,659 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 11:35:05,659 - INFO - PARAMS: None
+2026-07-06 11:35:05,659 - INFO - JSON: {'username': '', 'password': '123456'}
+2026-07-06 11:35:05,673 - INFO - RESPONSE -> 200
+2026-07-06 11:35:05,673 - INFO - BODY: {"code": 200, "message": "success", "method": "POST", "json": {"username": "", "password": "123456"}}
+2026-07-06 14:46:57,092 - INFO - REQUEST -> POST http://127.0.0.1:8000/login
+2026-07-06 14:46:57,093 - INFO - PARAMS: None
+2026-07-06 14:46:57,093 - INFO - JSON: {'username': 'admin', 'password': 'password'}
+2026-07-06 14:46:57,120 - INFO - RESPONSE -> 200
+2026-07-06 14:46:57,121 - INFO - BODY: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-06 14:51:16,393 - INFO - REQUEST -> POST http://127.0.0.1:8000/login
+2026-07-06 14:51:16,393 - INFO - PARAMS: None
+2026-07-06 14:51:16,393 - INFO - JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 14:51:16,398 - INFO - RESPONSE -> 200
+2026-07-06 14:51:16,398 - INFO - BODY: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-06 14:51:16,398 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 14:51:16,399 - INFO - PARAMS: None
+2026-07-06 14:51:16,399 - INFO - JSON: None
+2026-07-06 14:51:16,420 - INFO - RESPONSE -> 200
+2026-07-06 14:51:16,420 - INFO - BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 14:51:16,422 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 14:51:16,422 - INFO - PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 14:51:16,422 - INFO - JSON: None
+2026-07-06 14:51:16,451 - INFO - RESPONSE -> 200
+2026-07-06 14:51:16,451 - INFO - BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 14:51:16,453 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 14:51:16,453 - INFO - PARAMS: None
+2026-07-06 14:51:16,453 - INFO - JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 14:51:16,467 - INFO - RESPONSE -> 200
+2026-07-06 14:51:16,467 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 14:51:16,469 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 14:51:16,469 - INFO - PARAMS: None
+2026-07-06 14:51:16,469 - INFO - JSON: {'username': '', 'password': '123456'}
+2026-07-06 14:51:16,480 - INFO - RESPONSE -> 200
+2026-07-06 14:51:16,480 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:11:52,770 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:11:52,770 - INFO - PARAMS: None
+2026-07-06 15:11:52,770 - INFO - JSON: None
+2026-07-06 15:11:52,791 - INFO - RESPONSE -> 200
+2026-07-06 15:11:52,792 - INFO - BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 15:11:52,794 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:11:52,794 - INFO - PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 15:11:52,794 - INFO - JSON: None
+2026-07-06 15:11:52,797 - INFO - RESPONSE -> 200
+2026-07-06 15:11:52,797 - INFO - BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 15:11:52,799 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:11:52,799 - INFO - PARAMS: None
+2026-07-06 15:11:52,800 - INFO - JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 15:11:52,821 - INFO - RESPONSE -> 200
+2026-07-06 15:11:52,821 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:11:52,823 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:11:52,823 - INFO - PARAMS: None
+2026-07-06 15:11:52,823 - INFO - JSON: {'username': '', 'password': '123456'}
+2026-07-06 15:11:52,826 - INFO - RESPONSE -> 200
+2026-07-06 15:11:52,826 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:35:41,578 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:35:41,578 - INFO - PARAMS: None
+2026-07-06 15:35:41,579 - INFO - JSON: None
+2026-07-06 15:35:41,583 - INFO - RESPONSE -> 200
+2026-07-06 15:35:41,583 - INFO - BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 15:35:41,587 - INFO - REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:35:41,587 - INFO - PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 15:35:41,587 - INFO - JSON: None
+2026-07-06 15:35:41,606 - INFO - RESPONSE -> 200
+2026-07-06 15:35:41,606 - INFO - BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 15:35:41,610 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:35:41,610 - INFO - PARAMS: None
+2026-07-06 15:35:41,611 - INFO - JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 15:35:41,636 - INFO - RESPONSE -> 200
+2026-07-06 15:35:41,637 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:35:41,641 - INFO - REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:35:41,642 - INFO - PARAMS: None
+2026-07-06 15:35:41,642 - INFO - JSON: {'username': '', 'password': '123456'}
+2026-07-06 15:35:41,667 - INFO - RESPONSE -> 200
+2026-07-06 15:35:41,667 - INFO - BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:42:52,180 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:42:52,180 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:42:52,180 | INFO | BaseClient | JSON: None
+2026-07-06 15:42:52,184 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:42:52,185 | INFO | BaseClient | BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 15:42:52,197 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:42:52,197 | INFO | BaseClient | PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 15:42:52,197 | INFO | BaseClient | JSON: None
+2026-07-06 15:42:52,199 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:42:52,199 | INFO | BaseClient | BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 15:42:52,208 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:42:52,208 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:42:52,208 | INFO | BaseClient | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 15:42:52,211 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:42:52,211 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:42:52,215 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:42:52,215 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:42:52,215 | INFO | BaseClient | JSON: {'username': '', 'password': '123456'}
+2026-07-06 15:42:52,219 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:42:52,219 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:47:02,118 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:47:02,118 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:02,118 | INFO | BaseClient | JSON: None
+2026-07-06 15:47:02,122 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:02,122 | INFO | BaseClient | BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 15:47:02,126 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:47:02,126 | INFO | BaseClient | PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 15:47:02,127 | INFO | BaseClient | JSON: None
+2026-07-06 15:47:02,129 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:02,129 | INFO | BaseClient | BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 15:47:02,133 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:47:02,133 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:02,133 | INFO | BaseClient | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 15:47:02,136 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:02,137 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:47:02,141 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:47:02,141 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:02,141 | INFO | BaseClient | JSON: {'username': '', 'password': '123456'}
+2026-07-06 15:47:02,144 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:02,144 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:47:15,965 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:47:15,965 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:15,965 | INFO | BaseClient | JSON: None
+2026-07-06 15:47:15,968 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:15,968 | INFO | BaseClient | BODY: {
+  "args": {},
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get"
+}
+
+2026-07-06 15:47:15,973 | INFO | BaseClient | REQUEST -> GET http://127.0.0.1:8000/get
+2026-07-06 15:47:15,973 | INFO | BaseClient | PARAMS: {'username': 'test001', 'age': '18'}
+2026-07-06 15:47:15,973 | INFO | BaseClient | JSON: None
+2026-07-06 15:47:15,976 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:15,976 | INFO | BaseClient | BODY: {
+  "args": {
+    "age": "18",
+    "username": "test001"
+  },
+  "code": 200,
+  "message": "success",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/get?username=test001&age=18"
+}
+
+2026-07-06 15:47:15,980 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:47:15,980 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:15,980 | INFO | BaseClient | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-06 15:47:15,983 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:15,983 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": "test001"
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-06 15:47:15,987 | INFO | BaseClient | REQUEST -> POST http://127.0.0.1:8000/post
+2026-07-06 15:47:15,988 | INFO | BaseClient | PARAMS: None
+2026-07-06 15:47:15,988 | INFO | BaseClient | JSON: {'username': '', 'password': '123456'}
+2026-07-06 15:47:15,990 | INFO | BaseClient | RESPONSE -> 200
+2026-07-06 15:47:15,991 | INFO | BaseClient | BODY: {
+  "code": 200,
+  "json": {
+    "password": "123456",
+    "username": ""
+  },
+  "message": "success",
+  "method": "POST"
+}
+
+2026-07-08 15:18:35,929 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:35,930 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:18:35,930 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:35,934 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:35,935 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:18:35,938 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:35,938 | INFO | api_test | JSON: {'username': 'test001', 'password': 'wrong123'}
+2026-07-08 15:18:35,938 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:35,957 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:35,957 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:35,966 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:35,966 | INFO | api_test | JSON: {'username': '', 'password': '123456'}
+2026-07-08 15:18:35,966 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:35,988 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:35,988 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:35,993 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:35,993 | INFO | api_test | JSON: {'username': 'test001', 'password': ''}
+2026-07-08 15:18:35,993 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:35,996 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:35,996 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:35,999 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:35,999 | INFO | api_test | JSON: {'password': '123456'}
+2026-07-08 15:18:36,000 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,019 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,019 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,023 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,024 | INFO | api_test | JSON: {'username': 'test001'}
+2026-07-08 15:18:36,024 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,050 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,050 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,056 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,056 | INFO | api_test | JSON: {'username': 'aaaaaaaaaaaaaaaaaaaaa', 'password': '123456'}
+2026-07-08 15:18:36,056 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,080 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,080 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,084 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,086 | INFO | api_test | JSON: {'username': 'test001', 'password': '123'}
+2026-07-08 15:18:36,086 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,114 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,114 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,118 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,118 | INFO | api_test | JSON: {'username': 'test001', 'password': 'aaaaaaaaaaaaaaaaaaaaa'}
+2026-07-08 15:18:36,118 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,146 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,146 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,150 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,150 | INFO | api_test | JSON: {'username': '!@#$%', 'password': '123456'}
+2026-07-08 15:18:36,150 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,175 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,175 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,179 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,179 | INFO | api_test | JSON: {'username': "' or 1=1 --", 'password': '123456'}
+2026-07-08 15:18:36,180 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,205 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,206 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:18:36,214 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:18:36,214 | INFO | api_test | JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
+2026-07-08 15:18:36,215 | INFO | api_test | HEADERS: {}
+2026-07-08 15:18:36,236 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:18:36,236 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,279 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,279 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:17,279 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,308 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,309 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:17,313 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,313 | INFO | api_test | JSON: {'username': 'test001', 'password': 'wrong123'}
+2026-07-08 15:19:17,313 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,339 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,339 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,344 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,344 | INFO | api_test | JSON: {'username': '', 'password': '123456'}
+2026-07-08 15:19:17,345 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,348 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,348 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,352 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,352 | INFO | api_test | JSON: {'username': 'test001', 'password': ''}
+2026-07-08 15:19:17,352 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,370 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,370 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,374 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,374 | INFO | api_test | JSON: {'password': '123456'}
+2026-07-08 15:19:17,374 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,401 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,401 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,406 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,406 | INFO | api_test | JSON: {'username': 'test001'}
+2026-07-08 15:19:17,407 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,433 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,433 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,436 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,437 | INFO | api_test | JSON: {'username': 'aaaaaaaaaaaaaaaaaaaaa', 'password': '123456'}
+2026-07-08 15:19:17,437 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,462 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,462 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,467 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,467 | INFO | api_test | JSON: {'username': 'test001', 'password': '123'}
+2026-07-08 15:19:17,467 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,470 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,470 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,474 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,474 | INFO | api_test | JSON: {'username': 'test001', 'password': 'aaaaaaaaaaaaaaaaaaaaa'}
+2026-07-08 15:19:17,474 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,478 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,478 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,481 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,481 | INFO | api_test | JSON: {'username': '!@#$%', 'password': '123456'}
+2026-07-08 15:19:17,481 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,494 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,494 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,499 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,499 | INFO | api_test | JSON: {'username': "' or 1=1 --", 'password': '123456'}
+2026-07-08 15:19:17,499 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,503 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,503 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:17,507 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:17,507 | INFO | api_test | JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
+2026-07-08 15:19:17,507 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:17,535 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:17,535 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,919 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,919 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:46,919 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,948 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,948 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:46,952 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,952 | INFO | api_test | JSON: {'username': 'test001', 'password': 'wrong123'}
+2026-07-08 15:19:46,952 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,955 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,955 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,962 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,962 | INFO | api_test | JSON: {'username': '', 'password': '123456'}
+2026-07-08 15:19:46,962 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,966 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,966 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,970 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,970 | INFO | api_test | JSON: {'username': 'test001', 'password': ''}
+2026-07-08 15:19:46,970 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,975 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,975 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,979 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,979 | INFO | api_test | JSON: {'password': '123456'}
+2026-07-08 15:19:46,980 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,983 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,983 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,989 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,989 | INFO | api_test | JSON: {'username': 'test001'}
+2026-07-08 15:19:46,989 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:46,992 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:46,992 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:46,997 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:46,997 | INFO | api_test | JSON: {'username': 'aaaaaaaaaaaaaaaaaaaaa', 'password': '123456'}
+2026-07-08 15:19:46,997 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,004 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,005 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,008 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,008 | INFO | api_test | JSON: {'username': 'test001', 'password': '123'}
+2026-07-08 15:19:47,009 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,025 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,026 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,030 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,030 | INFO | api_test | JSON: {'username': 'test001', 'password': 'aaaaaaaaaaaaaaaaaaaaa'}
+2026-07-08 15:19:47,031 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,057 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,057 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,063 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,063 | INFO | api_test | JSON: {'username': '!@#$%', 'password': '123456'}
+2026-07-08 15:19:47,063 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,087 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,087 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,091 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,091 | INFO | api_test | JSON: {'username': "' or 1=1 --", 'password': '123456'}
+2026-07-08 15:19:47,091 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,118 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,119 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,123 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,123 | INFO | api_test | JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
+2026-07-08 15:19:47,123 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,151 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,151 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:19:47,155 | INFO | api_test | GET http://127.0.0.1:8000/products
+2026-07-08 15:19:47,155 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,155 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,181 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,182 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": "iPhone 15",
+      "price": 5999,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "MacBook Air",
+      "price": 7999,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "AirPods Pro",
+      "price": 1999,
+      "stock": 20
+    }
+  ],
+  "message": "success"
+}
+
+2026-07-08 15:19:47,188 | INFO | api_test | GET http://127.0.0.1:8000/products/1
+2026-07-08 15:19:47,188 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,188 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,213 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,214 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 1,
+    "name": "iPhone 15",
+    "price": 5999,
+    "stock": 10
+  },
+  "message": "success"
+}
+
+2026-07-08 15:19:47,218 | INFO | api_test | GET http://127.0.0.1:8000/products/2
+2026-07-08 15:19:47,218 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,218 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,245 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,245 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 2,
+    "name": "MacBook Air",
+    "price": 7999,
+    "stock": 5
+  },
+  "message": "success"
+}
+
+2026-07-08 15:19:47,249 | INFO | api_test | GET http://127.0.0.1:8000/products/3
+2026-07-08 15:19:47,249 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,249 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,276 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,276 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 3,
+    "name": "AirPods Pro",
+    "price": 1999,
+    "stock": 20
+  },
+  "message": "success"
+}
+
+2026-07-08 15:19:47,281 | INFO | api_test | GET http://127.0.0.1:8000/products/999
+2026-07-08 15:19:47,281 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,281 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,307 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,307 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:19:47,311 | INFO | api_test | GET http://127.0.0.1:8000/products/0
+2026-07-08 15:19:47,311 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,311 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,338 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,338 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:19:47,343 | INFO | api_test | GET http://127.0.0.1:8000/products/-1
+2026-07-08 15:19:47,343 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,343 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,369 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:19:47,369 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:19:47,373 | INFO | api_test | GET http://127.0.0.1:8000/products/abc
+2026-07-08 15:19:47,373 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:47,373 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,385 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:19:47,385 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:19:47,389 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,390 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,390 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,417 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,418 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,418 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,419 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,419 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,419 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,432 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,432 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,433 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,433 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:19:47,433 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:47,447 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,447 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 2
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:19:47,448 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,448 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,449 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,463 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,463 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,470 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,470 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,470 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,495 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,495 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,496 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,496 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,496 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,497 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,525 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,525 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,526 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,526 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:19:47,526 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,541 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,541 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:47,542 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,542 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,542 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,556 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,556 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,563 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,563 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,563 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,588 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,588 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,590 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,590 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,591 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,591 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,619 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,619 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,620 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,620 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,620 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:19:47,620 | INFO | api_test | HEADERS: {'Authorization': 'Bearer wrong_token'}
+2026-07-08 15:19:47,651 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,651 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:47,652 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,652 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,652 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,679 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,680 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,688 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,688 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,688 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,710 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,711 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,711 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,712 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,712 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,712 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,726 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,726 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,726 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,727 | INFO | api_test | JSON: {'quantity': 2}
+2026-07-08 15:19:47,727 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:47,742 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,742 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "product_id is required"
+}
+
+2026-07-08 15:19:47,743 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,744 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,744 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,747 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,747 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,752 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,752 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,752 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,774 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,774 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,775 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,775 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,776 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,776 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,789 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,790 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,790 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,790 | INFO | api_test | JSON: {'product_id': 1}
+2026-07-08 15:19:47,790 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:47,808 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,808 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity is required"
+}
+
+2026-07-08 15:19:47,810 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,810 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,810 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,813 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,813 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,820 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,820 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,820 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,823 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,823 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,826 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,826 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,826 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,826 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,852 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,852 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,853 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,853 | INFO | api_test | JSON: {'product_id': 999, 'quantity': 1}
+2026-07-08 15:19:47,853 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:47,867 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,867 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:19:47,868 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,868 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,868 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,870 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,870 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,877 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,877 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,877 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,898 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,899 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,899 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,900 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,900 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,900 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,913 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,913 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,914 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:47,914 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 0}
+2026-07-08 15:19:47,914 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:47,929 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,929 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity must be greater than 0"
+}
+
+2026-07-08 15:19:47,930 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,930 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,930 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,960 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,960 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:47,968 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:47,968 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:47,969 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:47,991 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:47,992 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:47,992 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:47,993 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:47,993 | INFO | api_test | JSON: None
+2026-07-08 15:19:47,993 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,007 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,007 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,008 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,008 | INFO | api_test | JSON: {'product_id': 1, 'quantity': -1}
+2026-07-08 15:19:48,008 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,023 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,023 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity must be greater than 0"
+}
+
+2026-07-08 15:19:48,024 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,024 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,024 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,053 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,053 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,065 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,065 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,065 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,086 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,086 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,087 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,087 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,088 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,088 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,116 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,116 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,117 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,117 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 999}
+2026-07-08 15:19:48,117 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,132 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,132 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "Insufficient stock"
+}
+
+2026-07-08 15:19:48,134 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,134 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,134 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,147 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,148 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,156 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,157 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,157 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,178 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,178 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,179 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,179 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,179 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,179 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,193 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,193 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,194 | INFO | api_test | GET http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,194 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,194 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,209 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,209 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [],
+  "message": "success"
+}
+
+2026-07-08 15:19:48,210 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,210 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,210 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,224 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,224 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,230 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,230 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,231 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,255 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,255 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,256 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,257 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,257 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,257 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,269 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,269 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,270 | INFO | api_test | GET http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,270 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,270 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,286 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,287 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:48,287 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,288 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,288 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,301 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,301 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,309 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,309 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,309 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,333 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,333 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,335 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,335 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,335 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,336 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,338 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,338 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,339 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,339 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 1}
+2026-07-08 15:19:48,339 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,367 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,367 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 1
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:19:48,367 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:19:48,367 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,367 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,394 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,394 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "Create order success"
+}
+
+2026-07-08 15:19:48,395 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,395 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,395 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,410 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,410 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,416 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,417 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,417 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,420 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,420 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,420 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,421 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,421 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,421 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,441 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,441 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,442 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:19:48,442 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,442 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,456 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,457 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:48,458 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,458 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,458 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,471 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,471 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,477 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,477 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,477 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,502 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,502 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,503 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,504 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,504 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,504 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,518 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,518 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,519 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,519 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:19:48,519 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,520 | INFO | api_test | HEADERS: {'Authorization': 'Bearer wrong_token'}
+2026-07-08 15:19:48,523 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,523 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:48,524 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,524 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,524 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,549 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,550 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,557 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,557 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,557 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,560 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,560 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,561 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,561 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,562 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,562 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,580 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,580 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,581 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:19:48,581 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,581 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,596 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,596 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "Cart is empty"
+}
+
+2026-07-08 15:19:48,597 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,597 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,597 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,612 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,612 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,618 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,618 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,618 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,642 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,642 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,643 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,643 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,644 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,644 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,657 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,657 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,658 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:19:48,658 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 1}
+2026-07-08 15:19:48,658 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,662 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,662 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 1
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:19:48,662 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:19:48,662 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,662 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,688 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,688 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "Create order success"
+}
+
+2026-07-08 15:19:48,688 | INFO | api_test | GET http://127.0.0.1:8000/order/1
+2026-07-08 15:19:48,688 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,688 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,692 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,692 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "success"
+}
+
+2026-07-08 15:19:48,693 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,693 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,693 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,720 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,721 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,726 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,727 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,727 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,750 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,750 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,751 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,751 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,751 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,751 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,767 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,767 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,767 | INFO | api_test | GET http://127.0.0.1:8000/order/1
+2026-07-08 15:19:48,767 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,767 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,780 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,781 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:19:48,782 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,782 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,782 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,796 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,796 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,803 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,803 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,803 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,828 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,828 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,828 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,829 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,829 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,829 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,832 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,832 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,833 | INFO | api_test | GET http://127.0.0.1:8000/order/999
+2026-07-08 15:19:48,833 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,833 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,859 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,860 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Order not found"
+}
+
+2026-07-08 15:19:48,861 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,861 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,861 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,874 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,874 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,882 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:19:48,882 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:19:48,882 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,905 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,905 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:19:48,906 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:19:48,906 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,906 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,906 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,909 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,909 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:19:48,909 | INFO | api_test | GET http://127.0.0.1:8000/order/abc
+2026-07-08 15:19:48,911 | INFO | api_test | PARAMS: None
+2026-07-08 15:19:48,911 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:19:48,937 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:19:48,937 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:19:48,938 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:19:48,938 | INFO | api_test | JSON: None
+2026-07-08 15:19:48,938 | INFO | api_test | HEADERS: {}
+2026-07-08 15:19:48,953 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:19:48,953 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:20:15,180 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,180 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:20:15,180 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,208 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,209 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:20:15,211 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,211 | INFO | api_test | JSON: {'username': 'test001', 'password': 'wrong123'}
+2026-07-08 15:20:15,212 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,239 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,240 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,241 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,241 | INFO | api_test | JSON: {'username': '', 'password': '123456'}
+2026-07-08 15:20:15,241 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,254 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,254 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,256 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,256 | INFO | api_test | JSON: {'username': 'test001', 'password': ''}
+2026-07-08 15:20:15,257 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,270 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,270 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,272 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,272 | INFO | api_test | JSON: {'password': '123456'}
+2026-07-08 15:20:15,272 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,285 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,285 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,288 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,288 | INFO | api_test | JSON: {'username': 'test001'}
+2026-07-08 15:20:15,288 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,302 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,302 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,305 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,305 | INFO | api_test | JSON: {'username': 'aaaaaaaaaaaaaaaaaaaaa', 'password': '123456'}
+2026-07-08 15:20:15,305 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,310 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,310 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,312 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,313 | INFO | api_test | JSON: {'username': 'test001', 'password': '123'}
+2026-07-08 15:20:15,313 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,332 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,332 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,335 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,335 | INFO | api_test | JSON: {'username': 'test001', 'password': 'aaaaaaaaaaaaaaaaaaaaa'}
+2026-07-08 15:20:15,335 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,338 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,338 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,340 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,340 | INFO | api_test | JSON: {'username': '!@#$%', 'password': '123456'}
+2026-07-08 15:20:15,340 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,364 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,364 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,366 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,366 | INFO | api_test | JSON: {'username': "' or 1=1 --", 'password': '123456'}
+2026-07-08 15:20:15,366 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,379 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,379 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:20:15,382 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:20:15,382 | INFO | api_test | JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
+2026-07-08 15:20:15,382 | INFO | api_test | HEADERS: {}
+2026-07-08 15:20:15,395 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:20:15,395 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,408 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,409 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:35,409 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,414 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,415 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:35,417 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,417 | INFO | api_test | JSON: {'username': 'test001', 'password': 'wrong123'}
+2026-07-08 15:27:35,417 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,431 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,432 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,433 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,434 | INFO | api_test | JSON: {'username': '', 'password': '123456'}
+2026-07-08 15:27:35,434 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,447 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,447 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,449 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,449 | INFO | api_test | JSON: {'username': 'test001', 'password': ''}
+2026-07-08 15:27:35,449 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,463 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,463 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,465 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,465 | INFO | api_test | JSON: {'password': '123456'}
+2026-07-08 15:27:35,465 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,480 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,480 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,481 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,481 | INFO | api_test | JSON: {'username': 'test001'}
+2026-07-08 15:27:35,482 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,509 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,509 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,511 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,511 | INFO | api_test | JSON: {'username': 'aaaaaaaaaaaaaaaaaaaaa', 'password': '123456'}
+2026-07-08 15:27:35,511 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,515 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,515 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,517 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,517 | INFO | api_test | JSON: {'username': 'test001', 'password': '123'}
+2026-07-08 15:27:35,517 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,541 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,541 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,543 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,543 | INFO | api_test | JSON: {'username': 'test001', 'password': 'aaaaaaaaaaaaaaaaaaaaa'}
+2026-07-08 15:27:35,543 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,561 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,562 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,565 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,565 | INFO | api_test | JSON: {'username': '!@#$%', 'password': '123456'}
+2026-07-08 15:27:35,565 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,586 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,586 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,588 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,589 | INFO | api_test | JSON: {'username': "' or 1=1 --", 'password': '123456'}
+2026-07-08 15:27:35,589 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,603 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,603 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,605 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,605 | INFO | api_test | JSON: {'username': '<script>alert(1)</script>', 'password': '123456'}
+2026-07-08 15:27:35,606 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,634 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,634 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Invalid credentials"
+}
+
+2026-07-08 15:27:35,638 | INFO | api_test | GET http://127.0.0.1:8000/products
+2026-07-08 15:27:35,638 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,638 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,664 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,664 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": "iPhone 15",
+      "price": 5999,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "MacBook Air",
+      "price": 7999,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "AirPods Pro",
+      "price": 1999,
+      "stock": 20
+    }
+  ],
+  "message": "success"
+}
+
+2026-07-08 15:27:35,666 | INFO | api_test | GET http://127.0.0.1:8000/products/1
+2026-07-08 15:27:35,666 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,666 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,680 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,680 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 1,
+    "name": "iPhone 15",
+    "price": 5999,
+    "stock": 10
+  },
+  "message": "success"
+}
+
+2026-07-08 15:27:35,682 | INFO | api_test | GET http://127.0.0.1:8000/products/2
+2026-07-08 15:27:35,682 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,683 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,696 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,696 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 2,
+    "name": "MacBook Air",
+    "price": 7999,
+    "stock": 5
+  },
+  "message": "success"
+}
+
+2026-07-08 15:27:35,701 | INFO | api_test | GET http://127.0.0.1:8000/products/3
+2026-07-08 15:27:35,701 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,701 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,727 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,727 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 3,
+    "name": "AirPods Pro",
+    "price": 1999,
+    "stock": 20
+  },
+  "message": "success"
+}
+
+2026-07-08 15:27:35,729 | INFO | api_test | GET http://127.0.0.1:8000/products/999
+2026-07-08 15:27:35,729 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,730 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,732 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,733 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:27:35,734 | INFO | api_test | GET http://127.0.0.1:8000/products/0
+2026-07-08 15:27:35,735 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,735 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,759 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,759 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:27:35,762 | INFO | api_test | GET http://127.0.0.1:8000/products/-1
+2026-07-08 15:27:35,762 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,762 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,777 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:27:35,777 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:27:35,779 | INFO | api_test | GET http://127.0.0.1:8000/products/abc
+2026-07-08 15:27:35,779 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:35,779 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,808 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:27:35,808 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:27:35,810 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,811 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:35,811 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,838 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,838 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:35,839 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:35,839 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:35,839 | INFO | api_test | JSON: None
+2026-07-08 15:27:35,839 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,855 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,856 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:35,857 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:35,857 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:27:35,857 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:35,884 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,885 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 2
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:27:35,886 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:35,886 | INFO | api_test | JSON: None
+2026-07-08 15:27:35,887 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,914 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,914 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:35,916 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:35,916 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:35,916 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,945 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,945 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:35,946 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:35,946 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:35,946 | INFO | api_test | JSON: None
+2026-07-08 15:27:35,948 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,977 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,977 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:35,978 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:35,978 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:27:35,978 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:35,992 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:35,992 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:35,993 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:35,995 | INFO | api_test | JSON: None
+2026-07-08 15:27:35,995 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,007 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,007 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,008 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,008 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,010 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,022 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,022 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,023 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,023 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,023 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,023 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,026 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,027 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,027 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,027 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,028 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 2}
+2026-07-08 15:27:36,028 | INFO | api_test | HEADERS: {'Authorization': 'Bearer wrong_token'}
+2026-07-08 15:27:36,030 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,030 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:36,032 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,032 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,032 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,052 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,052 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,054 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,054 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,054 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,057 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,057 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,057 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,058 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,058 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,058 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,082 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,082 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,082 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,082 | INFO | api_test | JSON: {'quantity': 2}
+2026-07-08 15:27:36,082 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,098 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,098 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "product_id is required"
+}
+
+2026-07-08 15:27:36,099 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,099 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,099 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,114 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,114 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,116 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,116 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,116 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,119 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,119 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,120 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,120 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,120 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,120 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,123 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,123 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,124 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,124 | INFO | api_test | JSON: {'product_id': 1}
+2026-07-08 15:27:36,124 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,145 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,145 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity is required"
+}
+
+2026-07-08 15:27:36,146 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,146 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,146 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,160 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,161 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,162 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,162 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,163 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,177 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,177 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,178 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,179 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,179 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,179 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,191 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,191 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,192 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,192 | INFO | api_test | JSON: {'product_id': 999, 'quantity': 1}
+2026-07-08 15:27:36,192 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,206 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,206 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Product not found"
+}
+
+2026-07-08 15:27:36,207 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,207 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,207 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,221 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,221 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,224 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,224 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,224 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,252 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,252 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,253 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,254 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,254 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,254 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,268 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,268 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,268 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,269 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 0}
+2026-07-08 15:27:36,269 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,271 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,272 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity must be greater than 0"
+}
+
+2026-07-08 15:27:36,272 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,272 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,272 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,275 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,275 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,277 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,277 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,277 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,281 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,281 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,281 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,282 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,282 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,282 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,299 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,299 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,299 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,299 | INFO | api_test | JSON: {'product_id': 1, 'quantity': -1}
+2026-07-08 15:27:36,299 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,314 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,315 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "quantity must be greater than 0"
+}
+
+2026-07-08 15:27:36,316 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,316 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,316 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,329 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,330 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,331 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,331 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,331 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,346 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,346 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,347 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,347 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,347 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,347 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,360 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,361 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,361 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,361 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 999}
+2026-07-08 15:27:36,361 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,365 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,365 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "Insufficient stock"
+}
+
+2026-07-08 15:27:36,366 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,366 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,366 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,391 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,391 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,393 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,393 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,393 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,407 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,407 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,408 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,409 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,409 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,409 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,425 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,425 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,425 | INFO | api_test | GET http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,426 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:36,426 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,454 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,454 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [],
+  "message": "success"
+}
+
+2026-07-08 15:27:36,455 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,455 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,455 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,458 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,458 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,460 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,460 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,460 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,484 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,484 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,485 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,485 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,486 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,486 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,500 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,500 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,500 | INFO | api_test | GET http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,501 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:36,501 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,516 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,517 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:36,517 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,517 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,518 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,531 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,531 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,533 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,533 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,533 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,547 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,547 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,548 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,548 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,548 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,548 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,562 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,562 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,563 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,563 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 1}
+2026-07-08 15:27:36,563 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,565 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,565 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 1
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:27:36,565 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:27:36,567 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,567 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,571 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,571 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "Create order success"
+}
+
+2026-07-08 15:27:36,572 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,572 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,572 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,593 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,593 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,595 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,595 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,595 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,609 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,609 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,610 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,610 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,610 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,610 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,629 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,629 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,630 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:27:36,630 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,630 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,658 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,658 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:36,658 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,658 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,658 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,687 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,687 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,689 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,689 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,689 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,703 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,703 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,703 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,703 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,703 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,703 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,717 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,718 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,718 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,719 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:27:36,719 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,719 | INFO | api_test | HEADERS: {'Authorization': 'Bearer wrong_token'}
+2026-07-08 15:27:36,734 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,734 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:36,734 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,734 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,734 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,748 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,748 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,750 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,750 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,750 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,753 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,753 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,753 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,754 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,754 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,754 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,756 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,756 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,757 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:27:36,757 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,757 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,779 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,779 | INFO | api_test | RESPONSE: {
+  "code": 400,
+  "message": "Cart is empty"
+}
+
+2026-07-08 15:27:36,780 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,780 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,780 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,796 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,796 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,798 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,798 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,798 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,811 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,811 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,812 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,812 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,812 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,812 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,825 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,825 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,826 | INFO | api_test | POST http://127.0.0.1:8000/cart
+2026-07-08 15:27:36,827 | INFO | api_test | JSON: {'product_id': 1, 'quantity': 1}
+2026-07-08 15:27:36,827 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,843 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,843 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": [
+    {
+      "product_id": 1,
+      "quantity": 1
+    }
+  ],
+  "message": "Add to cart success"
+}
+
+2026-07-08 15:27:36,843 | INFO | api_test | POST http://127.0.0.1:8000/order
+2026-07-08 15:27:36,843 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,843 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,857 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,857 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "Create order success"
+}
+
+2026-07-08 15:27:36,857 | INFO | api_test | GET http://127.0.0.1:8000/order/1
+2026-07-08 15:27:36,857 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:36,857 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,873 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,874 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "data": {
+    "items": [
+      {
+        "product_id": 1,
+        "quantity": 1
+      }
+    ],
+    "order_id": 1,
+    "status": "created"
+  },
+  "message": "success"
+}
+
+2026-07-08 15:27:36,875 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,875 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,875 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,889 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,889 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,890 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,890 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,891 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,893 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,893 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,894 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,894 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,894 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,895 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,898 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,898 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,899 | INFO | api_test | GET http://127.0.0.1:8000/order/1
+2026-07-08 15:27:36,899 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:36,901 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,919 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,921 | INFO | api_test | RESPONSE: {
+  "code": 401,
+  "message": "Unauthorized"
+}
+
+2026-07-08 15:27:36,922 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,922 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,922 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,935 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,935 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,937 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,937 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,937 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,952 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,952 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:36,953 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:36,953 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,953 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,953 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,966 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,966 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,967 | INFO | api_test | GET http://127.0.0.1:8000/order/999
+2026-07-08 15:27:36,967 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:36,967 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:36,984 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,984 | INFO | api_test | RESPONSE: {
+  "code": 404,
+  "message": "Order not found"
+}
+
+2026-07-08 15:27:36,985 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:36,985 | INFO | api_test | JSON: None
+2026-07-08 15:27:36,985 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:36,997 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:36,997 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:36,999 | INFO | api_test | POST http://127.0.0.1:8000/login
+2026-07-08 15:27:36,999 | INFO | api_test | JSON: {'username': 'test001', 'password': '123456'}
+2026-07-08 15:27:36,999 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:37,014 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:37,014 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "success",
+  "token": "token_abc123"
+}
+
+2026-07-08 15:27:37,015 | INFO | api_test | Authorization token has been set.
+2026-07-08 15:27:37,015 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:37,016 | INFO | api_test | JSON: None
+2026-07-08 15:27:37,016 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:37,029 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:37,029 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+
+2026-07-08 15:27:37,029 | INFO | api_test | GET http://127.0.0.1:8000/order/abc
+2026-07-08 15:27:37,029 | INFO | api_test | PARAMS: None
+2026-07-08 15:27:37,030 | INFO | api_test | HEADERS: {'Authorization': 'Bearer token_abc123'}
+2026-07-08 15:27:37,045 | INFO | api_test | STATUS_CODE: 404
+2026-07-08 15:27:37,045 | INFO | api_test | RESPONSE: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2026-07-08 15:27:37,046 | INFO | api_test | POST http://127.0.0.1:8000/reset
+2026-07-08 15:27:37,046 | INFO | api_test | JSON: None
+2026-07-08 15:27:37,046 | INFO | api_test | HEADERS: {}
+2026-07-08 15:27:37,061 | INFO | api_test | STATUS_CODE: 200
+2026-07-08 15:27:37,061 | INFO | api_test | RESPONSE: {
+  "code": 200,
+  "message": "reset success"
+}
+

@@ -1,0 +1,14 @@
+[32mINFO    [0m api_test:base_client.py:18 GET http://127.0.0.1:8000/products/2
+[32mINFO    [0m api_test:base_client.py:19 PARAMS: None
+[32mINFO    [0m api_test:base_client.py:20 HEADERS: {}
+[32mINFO    [0m api_test:base_client.py:29 STATUS_CODE: 200
+[32mINFO    [0m api_test:base_client.py:30 RESPONSE: {
+  "code": 200,
+  "data": {
+    "id": 2,
+    "name": "MacBook Air",
+    "price": 7999,
+    "stock": 5
+  },
+  "message": "success"
+}

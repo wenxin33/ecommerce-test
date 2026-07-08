@@ -1,0 +1,78 @@
+- case_id: TC_ORDER_001
+  case_name: 已登录且购物车有商品创建订单成功
+  method: post
+  path: /order
+  token_type: valid
+  prepare_cart: true
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: Create order success
+
+- case_id: TC_ORDER_002
+  case_name: 未登录创建订单失败
+  method: post
+  path: /order
+  token_type: none
+  prepare_cart: true
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized
+
+- case_id: TC_ORDER_003
+  case_name: 错误token创建订单失败
+  method: post
+  path: /order
+  token_type: invalid
+  prepare_cart: true
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized
+
+- case_id: TC_ORDER_004
+  case_name: 已登录但购物车为空创建订单失败
+  method: post
+  path: /order
+  token_type: valid
+  prepare_cart: false
+  expected_http_status: 200
+  expected_code: 400
+  expected_message: Cart is empty
+
+- case_id: TC_ORDER_005
+  case_name: 创建订单后查询订单成功
+  method: get
+  path: /order/1
+  token_type: valid
+  prepare_order: true
+  expected_http_status: 200
+  expected_code: 200
+  expected_message: success
+
+- case_id: TC_ORDER_006
+  case_name: 未登录查询订单失败
+  method: get
+  path: /order/1
+  token_type: none
+  prepare_order: true
+  expected_http_status: 200
+  expected_code: 401
+  expected_message: Unauthorized
+
+- case_id: TC_ORDER_007
+  case_name: 查询不存在订单
+  method: get
+  path: /order/999
+  token_type: valid
+  prepare_order: false
+  expected_http_status: 200
+  expected_code: 404
+  expected_message: Order not found
+
+- case_id: TC_ORDER_008
+  case_name: 查询非法order_id
+  method: get
+  path: /order/abc
+  token_type: valid
+  prepare_order: false
+  expected_http_status: 404
+  flask_404: true

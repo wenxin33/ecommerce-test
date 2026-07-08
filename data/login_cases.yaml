@@ -1,0 +1,105 @@
+- case_id: TC_LOGIN_001
+  case_name: 正确用户名和正确密码登录成功
+  json_data:
+    username: test001
+    password: "123456"
+  expected_code: 200
+  expected_message: success
+  expect_token: true
+
+- case_id: TC_LOGIN_002
+  case_name: 正确用户名和错误密码登录失败
+  json_data:
+    username: test001
+    password: wrong123
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_003
+  case_name: username为空
+  json_data:
+    username: ""
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_004
+  case_name: password为空
+  json_data:
+    username: test001
+    password: ""
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_005
+  case_name: 缺少username字段
+  json_data:
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_006
+  case_name: 缺少password字段
+  json_data:
+    username: test001
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_007
+  case_name: username超长
+  json_data:
+    username: aaaaaaaaaaaaaaaaaaaaa
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_008
+  case_name: password长度不足
+  json_data:
+    username: test001
+    password: "123"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_009
+  case_name: password超长
+  json_data:
+    username: test001
+    password: aaaaaaaaaaaaaaaaaaaaa
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_010
+  case_name: username特殊字符
+  json_data:
+    username: "!@#$%"
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_011
+  case_name: SQL注入输入
+  json_data:
+    username: "' or 1=1 --"
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
+
+- case_id: TC_LOGIN_012
+  case_name: XSS脚本输入
+  json_data:
+    username: "<script>alert(1)</script>"
+    password: "123456"
+  expected_code: 401
+  expected_message: Invalid credentials
+  expect_token: false
